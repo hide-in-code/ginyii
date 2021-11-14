@@ -1,0 +1,25 @@
+{
+  "config": {
+    "timezone": "Asia/Shanghai",
+    "log_debug": "true",
+    "server": {
+      "HOST": "127.0.0.1",
+      "PORT": "8088",
+      "ENV": "release"
+    },
+    "mysql": {
+      "DB_HOST": "127.0.0.1",
+      "DB_PORT": "3306",
+      "DB_NAME": "mydb",
+      "DB_USER": "root",
+      "DB_PWD": "root",
+      "DB_CHARSET": "utf8"
+    },
+    "redis": {
+      "REDIS_HOST": "127.0.0.1",
+      "REDIS_PORT": "6379",
+      "REDIS_PWD": "",
+      "REDIS_DB": "0"
+    }
+  }
+}

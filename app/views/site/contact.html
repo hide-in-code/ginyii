@@ -1,0 +1,49 @@
+<style>
+    .site-contact {
+        padding: 40px 100px;
+    }
+</style>
+{{template "header" .}}
+<div class="site-contact">
+    <h1>表单</h1>
+    <p>
+        表单demo
+    </p>
+
+    <div class="row">
+        <div class="col-lg-5">
+            <form id="contact-form" action="/index.php?r=site%2Fcontact" method="post">
+                <input type="hidden" name="_csrf" value="SbELWQb6IjU1r1itjr89nwy8Rvz26UKaV2PV5K9DC_MD5To8SbdTYQWcFJ7o7U-maPgPyIOndekxL7rcmAV8ow==">
+                <div class="form-group field-contactform-name required has-error">
+                    <label class="control-label" for="contactform-name">Name</label>
+                    <input type="text" id="contactform-name" class="form-control" name="ContactForm[name]" autofocus="" aria-required="true" aria-invalid="true">
+                </div>
+                <div class="form-group field-contactform-email required">
+                    <label class="control-label" for="contactform-email">Email</label>
+                    <input type="text" id="contactform-email" class="form-control" name="ContactForm[email]" aria-required="true">
+                    <p class="help-block help-block-error"></p>
+                </div>
+                <div class="form-group field-contactform-subject required">
+                    <label class="control-label" for="contactform-subject">Subject</label>
+                    <input type="text" id="contactform-subject" class="form-control" name="ContactForm[subject]" aria-required="true">
+                    <p class="help-block help-block-error"></p>
+                </div>
+                <div class="form-group field-contactform-body required">
+                    <label class="control-label" for="contactform-body">Body</label>
+                    <textarea id="contactform-body" class="form-control" name="ContactForm[body]" rows="6" aria-required="true"></textarea>
+                    <p class="help-block help-block-error"></p>
+                </div>
+                <div class="form-group field-contactform-verifycode">
+                    <label class="control-label" for="contactform-verifycode">Verification Code</label>
+                    <div class="row"><div class="col-lg-3"><img id="contactform-verifycode-image" src="/index.php?r=site%2Fcaptcha&amp;v=619115f8ca69f2.09022876" alt=""></div><div class="col-lg-6"><input type="text" id="contactform-verifycode" class="form-control" name="ContactForm[verifyCode]"></div></div>
+                    <p class="help-block help-block-error"></p>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" name="contact-button">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+{{template "footer" .}}
